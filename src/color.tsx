@@ -10,6 +10,7 @@ const Colors = {
   beige: "#F8E9D4",
   white: "#FFFFFF",
   underline: "#E5E5E5",
+  deepGray: "#E1F0D7",
 };
 
 export default Colors;
