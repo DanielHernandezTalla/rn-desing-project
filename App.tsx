@@ -7,7 +7,7 @@ import NotVerfiyScreen from "./src/Screens/NotVerfiyScreen";
 export default function App() {
   return (
     <NativeBaseProvider>
-      <NotVerfiyScreen />
+      <HomeScreen />
     </NativeBaseProvider>
   );
 }
