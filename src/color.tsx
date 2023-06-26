@@ -8,6 +8,7 @@ const Colors = {
   lightGray: "#F8F9FA",
   beige: "#F8E9D4",
   white: "#FFFFFF",
+  underline: "#E5E5E5",
 };
 
 export default Colors;
