@@ -6,11 +6,12 @@ import NotVerfiyScreen from "./src/Screens/NotVerfiyScreen";
 import SingleProductScreen from "./src/Screens/SingleProductScreen";
 import Review from "./src/Components/Review";
 import CartScreen from "./src/Screens/CartScreen";
+import ProfileScreen from "./src/Screens/ProfileScreen";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <CartScreen />
+      <ProfileScreen />
     </NativeBaseProvider>
   );
 }
