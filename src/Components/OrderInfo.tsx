@@ -8,8 +8,8 @@ interface props {
   title: string;
   subTitle: string;
   text: string;
-  success?: string;
-  danger?: string;
+  success?: boolean;
+  danger?: boolean;
 }
 export default function OrderInfo(props: props) {
   return (

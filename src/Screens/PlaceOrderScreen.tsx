@@ -46,7 +46,7 @@ export default function PlaceOrderScreen() {
         </Heading>
         <OrderItem />
         {/* Total */}
-        <PlaceOrderModel></PlaceOrderModel>
+        <PlaceOrderModel />
       </Box>
     </Box>
   );
