@@ -7,11 +7,12 @@ import SingleProductScreen from "./src/Screens/SingleProductScreen";
 import Review from "./src/Components/Review";
 import CartScreen from "./src/Screens/CartScreen";
 import ProfileScreen from "./src/Screens/ProfileScreen";
+import ShippingScreen from "./src/Screens/ShippingScreen";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <ProfileScreen />
+      <ShippingScreen />
     </NativeBaseProvider>
   );
 }
