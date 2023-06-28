@@ -2,7 +2,7 @@ import { Button, Center, HStack, Modal, Text, VStack } from "native-base";
 import React, { useState } from "react";
 import Buttone from "./Buttone";
 import Colors from "../color";
-import { color } from "native-base/lib/typescript/theme/styled-system";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfos = [
   { title: "Products", price: 123.32, color: "dark" },
@@ -13,6 +13,8 @@ const OrdersInfos = [
 
 export default function PlaceOrderModel() {
   const [showModel, setShowModel] = useState(false);
+  const navigation = useNavigation();
+
   return (
     <Center>
       <Buttone
@@ -49,7 +51,10 @@ export default function PlaceOrderModel() {
               bg={Colors.primary}
               h={45}
               _text={{ color: Colors.white }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                navigation.navigate("Order");
+                setShowModel(false);
+              }}
               _pressed={{ bg: Colors.primary }}>
               PLACE AN ORDER
             </Button>

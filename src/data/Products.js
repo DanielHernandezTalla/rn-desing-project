@@ -7,7 +7,7 @@ const products = [
     descripcion:
       "El ícono del básquetbol, creado para la cancha y adaptado al estilo urbano, vuelve con cuero sintético impecable y colores retro. El diseño clásico trae la década de los 80 de vuelta a las calles y su cuello acolchado de corte alto aporta un look clásico arraigado en la comodidad.",
     price: "$2,999",
-    countInStock: 10,
+    countInStock: 0,
     rating: 4,
     numReviews: 4,
   },

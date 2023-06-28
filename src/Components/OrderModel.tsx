@@ -11,7 +11,7 @@ import {
 import React, { useState } from "react";
 import Buttone from "./Buttone";
 import Colors from "../color";
-import { color } from "native-base/lib/typescript/theme/styled-system";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfos = [
   { title: "Products", price: 123.32, color: "dark" },
@@ -22,6 +22,8 @@ const OrdersInfos = [
 
 export default function OrderModel() {
   const [showModel, setShowModel] = useState(false);
+  const navigation = useNavigation();
+
   return (
     <Center>
       <Buttone
@@ -75,9 +77,12 @@ export default function OrderModel() {
               bg={Colors.dark}
               h={45}
               _text={{ color: Colors.white }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                navigation.navigate("Home");
+                setShowModel(false);
+              }}
               _pressed={{ bg: Colors.dark }}>
-              PLACE AN ORDER
+              PLACE LATER
             </Button>
           </Modal.Footer>
         </Modal.Content>

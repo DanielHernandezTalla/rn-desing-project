@@ -10,6 +10,7 @@ import {
 import React from "react";
 import Colors from "../color";
 import Buttone from "../Components/Buttone";
+import { useNavigation } from "@react-navigation/native";
 
 const ShippingInputs = [
   { label: "ENTER CITY", type: "text" },
@@ -19,6 +20,8 @@ const ShippingInputs = [
 ];
 
 export default function ShippingScreen() {
+  const navigation = useNavigation();
+
   return (
     <Box flex={1} safeAreaTop bg={Colors.primary} py={5}>
       {/* Header */}
@@ -55,7 +58,11 @@ export default function ShippingScreen() {
                 />
               </FormControl>
             ))}
-            <Buttone bg={Colors.primary} color={Colors.white} mt={5}>
+            <Buttone
+              bg={Colors.primary}
+              color={Colors.white}
+              mt={5}
+              onPress={() => navigation.navigate("Checkout")}>
               CONTINUE
             </Buttone>
           </VStack>

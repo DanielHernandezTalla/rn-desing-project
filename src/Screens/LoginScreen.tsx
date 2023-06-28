@@ -12,7 +12,11 @@ import {
 import Colors from "../color";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 
-const LoginScreen = () => {
+interface props {
+  navigation: any;
+}
+
+const LoginScreen = (props: props) => {
   return (
     <Box flex={1} bg={Colors.dark}>
       <Image
@@ -60,10 +64,13 @@ const LoginScreen = () => {
             my={30}
             w="40%"
             rounded={50}
-            bg={Colors.primary}>
+            bg={Colors.primary}
+            onPress={() => props.navigation.navigate("Bottom")}>
             LOGIN
           </Button>
-          <Pressable mt={4}>
+          <Pressable
+            mt={4}
+            onPress={() => props.navigation.navigate("Register")}>
             <Text color={Colors.gray}>SING UP</Text>
           </Pressable>
         </VStack>

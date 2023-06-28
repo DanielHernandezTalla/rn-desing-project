@@ -12,7 +12,11 @@ import {
 import Colors from "../color";
 import { FontAwesome, MaterialIcons, Ionicons } from "@expo/vector-icons";
 
-const RegisterScreen = () => {
+interface props {
+  navigation: any;
+}
+
+const RegisterScreen = ({ navigation }: props) => {
   return (
     <Box flex={1} bg={Colors.dark}>
       <Image
@@ -72,10 +76,11 @@ const RegisterScreen = () => {
             my={30}
             w="40%"
             rounded={50}
-            bg={Colors.primary}>
+            bg={Colors.primary}
+            onPress={() => navigation.navigate("Bottom")}>
             REGISTER
           </Button>
-          <Pressable mt={4}>
+          <Pressable mt={4} onPress={() => navigation.navigate("Login")}>
             <Text color={Colors.gray}>LOGIN</Text>
           </Pressable>
         </VStack>
